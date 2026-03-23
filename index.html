@@ -82,6 +82,61 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .modal h2{font-size:18px;margin-bottom:16px}
 .modal pre{background:#F1F5F9;padding:16px;border-radius:10px;font-size:13px;white-space:pre-wrap;line-height:1.6;max-height:50vh;overflow-y:auto}
 .modal .btn-row{display:flex;gap:10px;margin-top:16px;justify-content:flex-end}
+/* === Mobile === */
+@media(max-width:768px){
+  /* Header: stack vertically, search full width */
+  .header{flex-direction:column;gap:8px;padding:10px 14px}
+  .header h1{font-size:16px}
+  .search-bar{max-width:100%;width:100%}
+  .search-bar input{padding:10px 14px 10px 36px;font-size:14px}
+
+  /* Category nav: horizontal scroll, single row */
+  .cat-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:6px;padding:8px 0;top:82px;scrollbar-width:none}
+  .cat-nav::-webkit-scrollbar{display:none}
+  .cat-btn{flex-shrink:0;padding:6px 14px;font-size:12px;white-space:nowrap}
+  .cat-btn .count{padding:1px 6px;font-size:10px}
+
+  /* Review filter: inline with cat nav */
+  .cat-nav .review-filter{margin-left:8px;gap:4px;flex-shrink:0;border-left:1px solid var(--border);padding-left:8px}
+  .review-filter .cat-btn{padding:6px 10px;font-size:11px}
+
+  /* Container */
+  .container{padding:12px 10px}
+
+  /* Category header */
+  .cat-header{flex-direction:column;align-items:flex-start;gap:4px;margin-bottom:10px}
+  .cat-header .desc{margin-left:0;font-size:12px}
+  .cat-header h2{font-size:16px}
+
+  /* Article cards */
+  .article{margin-bottom:6px;border-radius:10px}
+  .article-head{padding:12px 14px;gap:8px}
+  .article-head h3{font-size:14px}
+  .article-head .tag{display:none}
+  .article-body{padding:0 14px 14px}
+  .article-body.show{padding-top:12px}
+
+  /* Review bar: stack vertically */
+  .review-bar{flex-direction:column;gap:8px;align-items:stretch}
+  .review-bar .review-btn{justify-content:center;padding:10px;font-size:14px}
+  .review-note{min-height:44px;font-size:14px}
+
+  /* Bottom bar: simplified */
+  .approve-bar{padding:8px 12px;gap:8px;flex-wrap:nowrap}
+  .approve-bar .progress{flex:1;min-width:0}
+  .approve-bar .progress-bar{width:60px}
+  .approve-bar .progress span:first-child{display:none}
+  .approve-bar .counts{gap:6px;font-size:12px;flex-shrink:0}
+  .approve-bar .btn{padding:8px 14px;font-size:12px;flex-shrink:0}
+
+  /* Modal */
+  .modal{padding:20px;width:95%;border-radius:12px}
+  .modal pre{font-size:12px;padding:12px}
+
+  /* Footer */
+  .footer{padding:20px 10px 70px;font-size:11px}
+}
+
 @media print{.header{position:static}.cat-nav,.search-bar,.approve-bar,.review-bar,.modal-overlay{display:none!important}.article-body{display:block!important;border-top:1px solid #eee;padding-top:12px!important}.article{break-inside:avoid}}
 </style>
 </head>
